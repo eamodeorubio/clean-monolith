@@ -1,0 +1,22 @@
+{
+  "name": "clean-monolith",
+  "version": "0.0.1",
+  "description": "YEAY backend",
+  "scripts": {
+    "test": "mocha --exit --require babel-register --recursive ./test/**/*spec.js",
+    "it": "mocha --exit --timeout 5000 --require babel-register --recursive ./ic-test/**/*it.js",
+    "build": "babel src/ -d lib/",
+    "prepublish": "npm run build"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "^4.0.1",
+    "sinon": "^4.1.1",
+    "sinon-chai": "^2.14.0"
+  }
+}
